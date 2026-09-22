@@ -16,6 +16,9 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/vehicles', vehicleRoutes);
 app.use('/api/rentals', rentalRoutes);
+app.get('/', (req, res) => {
+  res.send('API is running successfully!');
+});
 
 // Error Handler
 app.use(errorHandler);
